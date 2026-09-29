@@ -1,0 +1,101 @@
+# ==============================================================================
+# BHARAT ELECTRONICS LIMITED (BEL) - SIH26125 DEFENSE PLATFORM
+# Comprehensive Master Git Ignore Specification
+# ==============================================================================
+
+# --- Node.js / Frontend ---
+node_modules/
+sih-frontend/node_modules/
+sih-frontend/dist/
+sih-frontend/dist-ssr/
+*.local
+.npm/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+.eslintcache
+*.tsbuildinfo
+
+# --- Portable Node Windows Binaries (in workspace root) ---
+node.exe
+corepack
+corepack.cmd
+npm
+npm.cmd
+npm.ps1
+npx
+npx.cmd
+npx.ps1
+nodevars.bat
+install_tools.bat
+
+# --- Python / Backend ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+.venv/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+
+# --- Environment & Secrets (NEVER COMMIT) ---
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.cert
+*.p12
+
+# --- AWS & Cloud Deployment Artifacts ---
+lambda.zip
+backend/lambda.zip
+.aws-sam/
+cdk.out/
+.serverless/
+discovery_results.json
+
+# --- Operating System & IDE ---
+.DS_Store
+Thumbs.db
+Desktop.ini
+.idea/
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+*.sublime-workspace
+*.sublime-project
+*.swp
+*~

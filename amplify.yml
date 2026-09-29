@@ -1,0 +1,17 @@
+version: 1
+frontend:
+  phases:
+    preBuild:
+      commands:
+        - cd sih-frontend
+        - npm ci
+    build:
+      commands:
+        - npm run build
+  artifacts:
+    baseDirectory: sih-frontend/dist
+    files:
+      - '**/*'
+  cache:
+    paths:
+      - sih-frontend/node_modules/**/*

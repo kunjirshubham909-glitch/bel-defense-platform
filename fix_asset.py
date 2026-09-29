@@ -1,0 +1,4 @@
+import pathlib
+
+code += '"""\nAsset service implementing IAssetService with state machine and ABAC integration.\n"""\nimport hashlib, uuid, json\nfrom datetime import datetime, timezone\nfrom typing import Any\nfrom backend.domain.entities import User, DefenseAsset, UserRole, ClearanceLevel, MilitaryUnit, AssetState, AuditRecord\nfrom backend.domain.merkle_engine import calculate_payload_hash, calculate_block_hash, GENESIS_PREV_HASH\nfrom backend.ports.inbound import IAssetService\nfrom backend.ports.outbound import IAssetRepository, IUserRepository, IAuditLedger\nfrom backend.domain.state_machine import transition_asset_state, InvalidStateTransitionError, UnauthorizedStateChangeError\nfrom backend.adapters.paseto_adapter import PASETOAdapter\n\n'
+code = ''
