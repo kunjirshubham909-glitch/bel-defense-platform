@@ -3,15 +3,16 @@ frontend:
   phases:
     preBuild:
       commands:
-        - cd sih-frontend
-        - npm ci
+        - nvm use 20 || nvm install 20 && nvm use 20
+        - node -v
+        - npm install
     build:
       commands:
         - npm run build
   artifacts:
-    baseDirectory: sih-frontend/dist
+    baseDirectory: dist
     files:
       - '**/*'
   cache:
     paths:
-      - sih-frontend/node_modules/**/*
+      - node_modules/**/*
